@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<script>
+    auth.onAuthStateChanged(user => {
+        if (!user) {
+            window.location.href = "login.html"; // redirect if not logged in
+        }
+    });
+</script>
+
+<html>
+<head>
+    <title>Favorites</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body onload="loadFavorites()">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="tops.html">Tops</a>
+        <a href="bottoms.html">Bottoms</a>
+        <a href="dresses.html">Dresses</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="favorites.html">Favorites 💖</a>
+    </nav>
+
+    <h1>💖 Favorites 💖</h1>
+
+    <div class="page-content">
+        <div id="favorites"></div>
+    </div>
+</body>
+</html>

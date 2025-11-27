@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up - Shared Closet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="firebase.js"></script>
+</head>
+<body>
+    <div class="page-content" style="max-width:400px; margin:50px auto; text-align:center;">
+        <h1>Sign Up</h1>
+        <input type="email" id="email" placeholder="Email" style="width:100%; padding:10px; margin:5px 0;">
+        <input type="password" id="password" placeholder="Password" style="width:100%; padding:10px; margin:5px 0;">
+        <button onclick="signup()">Sign Up</button>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+        <div id="message" style="color:red; margin-top:10px;"></div>
+    </div>
+
+    <script>
+        function signup() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .then(() => {
+                    window.location.href = "index.html"; // redirect after signup
+                })
+                .catch((error) => {
+                    document.getElementById('message').textContent = error.message;
+                });
+        }
+    </script>
+</body>
+</html>

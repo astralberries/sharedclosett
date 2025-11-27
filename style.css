@@ -1,0 +1,177 @@
+/* Body & Fonts */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    background: #ffeefb;
+    color: #5a3b2e;
+}
+
+/* Navbar */
+nav {
+    background: #f6c6da;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 18px;
+}
+
+nav a {
+    color: #5a3b2e;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 12px;
+    transition: 0.2s;
+    background: #ffd7ec;
+}
+
+nav a:hover {
+    background: #ffb6de;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 32px;
+    color: #7b4c3a;
+}
+
+/* Page content wrapper */
+.page-content {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+/* Add item box */
+.add-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.add-box input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #dba8b4;
+    min-width: 120px;
+}
+
+.add-box button {
+    background: #d39ca6;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.add-box button:hover {
+    background: #b07e88;
+}
+
+/* Search bar */
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 2px solid #dba8b4;
+}
+
+/* Card layout */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual card */
+.card {
+    background: #fff4f9;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(200,150,170,0.3);
+    width: 200px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(200,150,170,0.5);
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/* Item info */
+.card .info {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card .info div {
+    margin: 3px 0;
+}
+
+.card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.card .tag {
+    background: #ffd7ec;
+    color: #5a3b2e;
+    padding: 3px 7px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* Buttons */
+.card button {
+    background: #d39ca6;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 2px;
+    transition: 0.2s;
+}
+
+.card button:hover {
+    background: #b07e88;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        width: 90%;
+    }
+}
